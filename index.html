@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samira Sadmin | CSE Student & Aspiring Software Engineer</title>
+    <meta name="description" content="Portfolio of Samira Sadmin, Computer Science and Engineering student at Daffodil International University, interested in web development, programming, technology, and problem solving.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#030712',
+                            900: '#0b1329',
+                            800: '#1e293b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    keyframes: {
+                        tilt: {
+                            '0%, 50%, 100%': { transform: 'rotate(0deg)' },
+                            '25%': { transform: 'rotate(1deg)' },
+                            '75%': { transform: 'rotate(-1deg)' },
+                        }
+                    },
+                    animation: {
+                        tilt: 'tilt 10s infinite ease-in-out',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-slate-950 overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-slate-950/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center font-mono font-bold text-lg text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+                    SS
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-lg tracking-tight text-white group-hover:text-cyan-400 transition-colors">Samira Sadmin</span>
+                    <span class="text-xs text-slate-400 font-mono">CSE Daffodil</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#home" class="nav-link text-sm font-medium text-cyan-400 transition-colors py-2">Home</a>
+                <a href="#about" class="nav-link text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors py-2">About</a>
+                <a href="#skills" class="nav-link text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors py-2">Skills</a>
+                <a href="#projects" class="nav-link text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors py-2">Projects</a>
+                <a href="#education" class="nav-link text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors py-2">Education</a>
+                <a href="#contact" class="nav-link text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors py-2">Contact</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 text-sm font-semibold transition-all shadow-lg shadow-cyan-500/5">
+                    Let's Talk
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" aria-label="Toggle Navigation Menu" class="md:hidden w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-200 hover:text-cyan-400 focus:outline-none transition-colors">
+                <i class="fa-solid fa-bars text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="fixed inset-x-0 top-20 bg-slate-950/95 backdrop-blur-xl border-b border-white/10 p-6 flex flex-col gap-4 transform -translate-y-full opacity-0 pointer-events-none transition-all duration-300 md:hidden shadow-2xl">
+            <a href="#home" class="mobile-link text-base font-medium text-slate-200 hover:text-cyan-400 py-2 border-b border-white/5">Home</a>
+            <a href="#about" class="mobile-link text-base font-medium text-slate-200 hover:text-cyan-400 py-2 border-b border-white/5">About</a>
+            <a href="#skills" class="mobile-link text-base font-medium text-slate-200 hover:text-cyan-400 py-2 border-b border-white/5">Skills</a>
+            <a href="#projects" class="mobile-link text-base font-medium text-slate-200 hover:text-cyan-400 py-2 border-b border-white/5">Projects</a>
+            <a href="#education" class="mobile-link text-base font-medium text-slate-200 hover:text-cyan-400 py-2 border-b border-white/5">Education</a>
+            <a href="#contact" class="mobile-link text-base font-medium text-slate-200 hover:text-cyan-400 py-2">Contact</a>
+            <a href="#contact" class="mobile-link w-full text-center py-3 rounded-xl bg-cyan-500 text-slate-950 font-bold mt-2 shadow-lg shadow-cyan-500/20">Let's Talk</a>
+        </div>
+    </header>
+
+    <main class="relative z-10">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center pt-28 pb-20 px-6">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 flex flex-col items-start gap-6 text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono font-medium tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                        Available for Opportunities & Collaborations
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
+                        Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400">Samira Sadmin</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl font-medium text-slate-300 font-mono">
+                        Computer Science and Engineering Student | Aspiring Software Engineer / Data Analyst
+                    </p>
+
+                    <p class="text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+                        Studying at Daffodil International University in Bangladesh. Interested in web development, programming, technology, and problem solving. Focused on developing practical skills and building a strong foundation for a career in software engineering or data analysis.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#projects" class="px-7 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold text-sm hover:opacity-95 transition-all shadow-xl shadow-cyan-500/20 flex items-center gap-2 group">
+                            <span>View Projects</span>
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#contact" class="px-7 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-sm transition-all flex items-center gap-2">
+                            <span>Contact Me</span>
+                            <i class="fa-solid fa-envelope text-slate-400"></i>
+                        </a>
+                    </div>
+
+                    <!-- Quick Stats / Badges -->
+                    <div class="grid grid-cols-3 gap-6 pt-6 border-t border-white/10 w-full max-w-xl">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">CSE</div>
+                            <div class="text-xs text-slate-400 mt-1">DIU Undergraduate</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">Web & Data</div>
+                            <div class="text-xs text-slate-400 mt-1">Core Focus Area</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">BD</div>
+                            <div class="text-xs text-slate-400 mt-1">Based in Bangladesh</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Profile Visual / Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur-xl opacity-30 animate-tilt"></div>
+                        <div class="relative bg-slate-900/90 border border-white/10 rounded-3xl p-8 backdrop-blur-xl shadow-2xl flex flex-col items-center text-center gap-6">
+
+                            <!-- Profile Photo -->
+                            <div class="relative w-44 h-44 rounded-2xl border-2 border-cyan-500/50 shadow-lg shadow-cyan-500/10 overflow-hidden group">
+                                <img src="assets/profile.jpg" alt="Samira Sadmin" class="profile-image w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+                            </div>
+
+                            <div class="flex flex-col gap-1">
+                                <h3 class="text-xl font-bold text-white">Samira Sadmin</h3>
+                                <p class="text-xs font-mono text-cyan-400">Computer Science & Engineering</p>
+                                <p class="text-xs text-slate-400 mt-1">Daffodil International University</p>
+                            </div>
+
+                            <!-- Social Links Pill -->
+                            <div class="flex items-center gap-3 pt-2">
+                                <a href="https://github.com/Samira-Sadmin" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-500/40 flex items-center justify-center text-slate-300 hover:text-cyan-400 transition-all">
+                                    <i class="fa-brands fa-github text-lg"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/samira-sadmin-b39b17331" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-500/40 flex items-center justify-center text-slate-300 hover:text-cyan-400 transition-all">
+                                    <i class="fa-brands fa-linkedin-in text-lg"></i>
+                                </a>
+                                <a href="mailto:sadmin2305101751@diu.edu.bd" aria-label="Email Contact" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-500/40 flex items-center justify-center text-slate-300 hover:text-cyan-400 transition-all">
+                                    <i class="fa-solid fa-envelope text-lg"></i>
+                                </a>
+                            </div>
+
+                            <div class="w-full pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-slate-400">
+                                <span>Status: Studying</span>
+                                <span class="text-emerald-400 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Online</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-24 px-6 border-t border-white/5 bg-slate-900/30">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col items-center text-center mb-16">
+                    <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-3">Get to know me</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">About Me</h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-4"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Bio Text -->
+                    <div class="lg:col-span-7 flex flex-col gap-6 text-slate-300">
+                        <p class="text-lg leading-relaxed">
+                            Hello! I am <strong class="text-white font-semibold">Samira Sadmin</strong>, a dedicated Computer Science and Engineering undergraduate student currently studying at <strong class="text-cyan-400">Daffodil International University</strong> in Bangladesh.
+                        </p>
+                        <p class="leading-relaxed text-slate-400">
+                            My academic journey is driven by curiosity about technology and how software systems work. I enjoy exploring web development, programming, solving problems, and learning how technology can be used to build useful solutions.
+                        </p>
+                        <p class="leading-relaxed text-slate-400">
+                            My career goal is to become a skilled <strong class="text-white">Software Engineer</strong> or <strong class="text-white">Data Analyst</strong>. I aim to keep learning modern technologies, strengthen my programming skills, and build practical projects.
+                        </p>
+
+                        <!-- Highlights Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                            <div class="p-5 rounded-2xl bg-slate-900/80 border border-white/10 flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Academic Focus</h4>
+                                    <p class="text-xs text-slate-400 mt-1">CSE Undergraduate at Daffodil International University.</p>
+                                </div>
+                            </div>
+                            <div class="p-5 rounded-2xl bg-slate-900/80 border border-white/10 flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Development</h4>
+                                    <p class="text-xs text-slate-400 mt-1">Building responsive, accessible, and high-performance websites.</p>
+                                </div>
+                            </div>
+                            <div class="p-5 rounded-2xl bg-slate-900/80 border border-white/10 flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 shrink-0">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Data & Logic</h4>
+                                    <p class="text-xs text-slate-400 mt-1">Analyzing datasets and sharpening problem-solving skills.</p>
+                                </div>
+                            </div>
+                            <div class="p-5 rounded-2xl bg-slate-900/80 border border-white/10 flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Location</h4>
+                                    <p class="text-xs text-slate-400 mt-1">Based in Bangladesh, open to remote and local opportunities.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Attributes / Strengths Card -->
+                    <div class="lg:col-span-5 flex flex-col gap-6">
+                        <div class="p-8 rounded-3xl bg-slate-900/90 border border-white/10 shadow-2xl relative">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-2xl pointer-events-none"></div>
+                            <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                                <i class="fa-solid fa-compass text-cyan-400"></i>
+                                Career Objectives & Strengths
+                            </h3>
+                            <ul class="flex flex-col gap-4 text-slate-300 text-sm">
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
+                                    <span><strong class="text-white">Aspiring Software Engineer:</strong> Focused on mastering software engineering principles, design patterns, and scalable application architecture.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
+                                    <span><strong class="text-white">Data Analyst Path:</strong> Keen interest in data analytics, statistical modelling, and turning raw data into meaningful insights.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
+                                    <span><strong class="text-white">Continuous Learner:</strong> Always exploring new frameworks, libraries, and programming methodologies.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
+                                    <span><strong class="text-white">Team Player & Problem Solver:</strong> Strong communication, analytical thinking, and collaborative mindset.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 px-6 border-t border-white/5">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col items-center text-center mb-16">
+                    <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-3">Expertise & Stack</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Skills & Technologies</h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-4"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Programming Languages -->
+                    <div class="p-6 rounded-3xl bg-slate-900/60 border border-white/10 hover:border-cyan-500/40 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-4">Programming Languages</h3>
+                            <ul class="flex flex-col gap-3 text-slate-300 text-sm">
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-cyan-400"></i>
+                                    <span>Python</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-cyan-400"></i>
+                                    <span>JavaScript (ES6+)</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-cyan-400"></i>
+                                    <span>C / C++</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-cyan-400"></i>
+                                    <span>Java</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-white/5 text-xs text-slate-400 font-mono">
+                            Core Logic & Algorithms
+                        </div>
+                    </div>
+
+                    <!-- Frontend Technologies -->
+                    <div class="p-6 rounded-3xl bg-slate-900/60 border border-white/10 hover:border-cyan-500/40 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xl mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-4">Frontend Technologies</h3>
+                            <ul class="flex flex-col gap-3 text-slate-300 text-sm">
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-blue-400"></i>
+                                    <span>HTML5 & Semantic Markup</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-blue-400"></i>
+                                    <span>CSS3 / Tailwind CSS</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-blue-400"></i>
+                                    <span>Vanilla JavaScript</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-blue-400"></i>
+                                    <span>Responsive Web Design</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-white/5 text-xs text-slate-400 font-mono">
+                            User Interfaces & UI/UX
+                        </div>
+                    </div>
+
+                    <!-- Tools & Technologies -->
+                    <div class="p-6 rounded-3xl bg-slate-900/60 border border-white/10 hover:border-cyan-500/40 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xl mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-4">Tools & Technologies</h3>
+                            <ul class="flex flex-col gap-3 text-slate-300 text-sm">
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-indigo-400"></i>
+                                    <span>Git & GitHub</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-indigo-400"></i>
+                                    <span>VS Code IDE</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-indigo-400"></i>
+                                    <span>Command Line Interface</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-indigo-400"></i>
+                                    <span>Data Analysis Basics</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-white/5 text-xs text-slate-400 font-mono">
+                            Workflow & Environment
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="p-6 rounded-3xl bg-slate-900/60 border border-white/10 hover:border-cyan-500/40 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-users-gear"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-4">Soft Skills</h3>
+                            <ul class="flex flex-col gap-3 text-slate-300 text-sm">
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-emerald-400"></i>
+                                    <span>Problem Solving & Analytical Thinking</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-emerald-400"></i>
+                                    <span>Effective Communication</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-emerald-400"></i>
+                                    <span>Team Collaboration</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-chevron-right text-xs text-emerald-400"></i>
+                                    <span>Adaptability & Quick Learning</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-white/5 text-xs text-slate-400 font-mono">
+                            Professional Mindset
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 px-6 border-t border-white/5 bg-slate-900/30">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col items-center text-center mb-16">
+                    <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-3">Portfolio Work</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Featured Projects</h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-4"></div>
+                    <p class="text-slate-400 text-sm max-w-xl mt-4">A selection of academic projects, web applications, and programming experiments showcasing my technical growth.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-slate-900/80 border border-white/10 rounded-3xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 flex flex-col group shadow-xl">
+                        <div class="relative h-48 bg-gradient-to-tr from-slate-950 to-blue-950 flex items-center justify-center overflow-hidden border-b border-white/5">
+                            <div class="absolute inset-0 bg-cyan-500/5 group-hover:bg-cyan-500/10 transition-colors"></div>
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fa-solid fa-laptop-code text-4xl text-cyan-400 group-hover:scale-110 transition-transform duration-300"></i>
+                                <span class="text-xs font-mono text-slate-400">Web Application</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between gap-6">
+                            <div class="flex flex-col gap-3">
+                                <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">Personal Portfolio Website</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    A responsive, modern personal portfolio website built with semantic HTML5, modern CSS3 (Tailwind concepts), and vanilla JavaScript featuring smooth interactions and clean design.
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-mono text-cyan-300">HTML5</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-mono text-cyan-300">CSS3</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-mono text-cyan-300">JavaScript</span>
+                                </div>
+                                <div class="flex items-center gap-3 pt-2 border-t border-white/5">
+                                    <a href="#contact" class="flex-1 py-2.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+                                        <i class="fa-solid fa-eye"></i>
+                                        <span>Live Demo</span>
+                                    </a>
+                                    <a href="https://github.com/Samira-Sadmin" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+                                        <i class="fa-brands fa-github"></i>
+                                        <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-slate-900/80 border border-white/10 rounded-3xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 flex flex-col group shadow-xl">
+                        <div class="relative h-48 bg-gradient-to-tr from-slate-950 to-indigo-950 flex items-center justify-center overflow-hidden border-b border-white/5">
+                            <div class="absolute inset-0 bg-blue-500/5 group-hover:bg-blue-500/10 transition-colors"></div>
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fa-solid fa-utensils text-4xl text-blue-400 group-hover:scale-110 transition-transform duration-300"></i>
+                                <span class="text-xs font-mono text-slate-400">UI/UX Design Prototype</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between gap-6">
+                            <div class="flex flex-col gap-3">
+                                <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">Food Delivery App Prototype</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    A food delivery app concept designed in Figma, exploring user flows for discovering restaurants, browsing menus, placing orders, and tracking deliveries.
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-mono text-blue-300">Figma</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-mono text-blue-300">UI/UX Design</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-mono text-blue-300">Prototyping</span>
+                                </div>
+                                <div class="flex items-center gap-3 pt-2 border-t border-white/5">
+                                    <a href="#contact" class="flex-1 py-2.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+                                        <i class="fa-solid fa-eye"></i>
+                                        <span>Live Demo</span>
+                                    </a>
+                                    <a href="https://github.com/Samira-Sadmin" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+                                        <i class="fa-brands fa-github"></i>
+                                        <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-slate-900/80 border border-white/10 rounded-3xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 flex flex-col group shadow-xl">
+                        <div class="relative h-48 bg-gradient-to-tr from-slate-950 to-emerald-950 flex items-center justify-center overflow-hidden border-b border-white/5">
+                            <div class="absolute inset-0 bg-emerald-500/5 group-hover:bg-emerald-500/10 transition-colors"></div>
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fa-solid fa-gamepad text-4xl text-emerald-400 group-hover:scale-110 transition-transform duration-300"></i>
+                                <span class="text-xs font-mono text-slate-400">Game AI / Unreal Engine</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between gap-6">
+                            <div class="flex flex-col gap-3">
+                                <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">Adaptive Multi-Sensory Enemy AI for Intelligent NPC Behavior Using Unreal Engine</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    An Unreal Engine project prototype exploring adaptive enemy AI that uses multiple sensory inputs to perceive player activity and drive more intelligent, responsive NPC behavior.
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-mono text-emerald-300">Unreal Engine</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-mono text-emerald-300">Enemy AI</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-mono text-emerald-300">NPC Behavior</span>
+                                </div>
+                                <div class="flex items-center gap-3 pt-2 border-t border-white/5">
+                                    <a href="#contact" class="flex-1 py-2.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+                                        <i class="fa-solid fa-eye"></i>
+                                        <span>Live Demo</span>
+                                    </a>
+                                    <a href="https://github.com/Samira-Sadmin" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+                                        <i class="fa-brands fa-github"></i>
+                                        <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-24 px-6 border-t border-white/5">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col items-center text-center mb-16">
+                    <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-3">Academic Background</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Education & Coursework</h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-4"></div>
+                </div>
+
+                <div class="max-w-3xl mx-auto">
+                    <!-- Timeline Card -->
+                    <div class="relative pl-8 sm:pl-10 border-l-2 border-cyan-500/30 flex flex-col gap-10">
+                        <!-- Education Item -->
+                        <div class="relative group">
+                            <!-- Timeline Dot -->
+                            <div class="absolute -left-[41px] sm:-left-[49px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-cyan-400 flex items-center justify-center">
+                                <div class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></div>
+                            </div>
+
+                            <div class="p-8 rounded-3xl bg-slate-900/80 border border-white/10 shadow-xl relative group-hover:border-cyan-500/40 transition-all">
+                                <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                                    <span class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono font-semibold">Undergraduate Degree</span>
+                                    <span class="text-xs font-mono text-slate-400">Present (Academic Timeline)</span>
+                                </div>
+
+                                <h3 class="text-xl sm:text-2xl font-extrabold text-white mb-2">Bachelor of Science in Computer Science and Engineering</h3>
+                                <p class="text-cyan-400 font-medium text-sm mb-4">Daffodil International University (DIU), Bangladesh</p>
+
+                                <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                    Pursuing comprehensive education in core computer science disciplines, software engineering principles, algorithms, database management, and data structures.
+                                </p>
+
+                                <div class="border-t border-white/10 pt-4">
+                                    <h4 class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3">Relevant Coursework & Studies:</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-200">Data Structures & Algorithms</span>
+                                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-200">Object-Oriented Programming</span>
+                                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-200">Database Management Systems</span>
+                                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-200">Software Engineering</span>
+                                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-200">Computer Networks</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 px-6 border-t border-white/5 bg-slate-900/30">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col items-center text-center mb-16">
+                    <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-3">Get in Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Contact Me</h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-4"></div>
+                    <p class="text-slate-400 text-sm max-w-xl mt-4">Have a question, collaboration proposal, or want to discuss technology? Send me a message!</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- Contact Info Cards -->
+                    <div class="lg:col-span-5 flex flex-col gap-6">
+                        <div class="p-8 rounded-3xl bg-slate-950/80 border border-white/10 shadow-xl flex flex-col gap-6">
+                            <h3 class="text-xl font-bold text-white">Let's Connect</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                I am always open to discussing new projects, creative ideas, or potential opportunities in software engineering and data analysis.
+                            </p>
+
+                            <div class="flex flex-col gap-4 pt-2">
+                                <div class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
+                                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0">
+                                        <i class="fa-solid fa-envelope text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-mono text-slate-400">Email Me</div>
+                                        <a href="mailto:sadmin2305101751@diu.edu.bd" class="text-white font-medium text-sm hover:text-cyan-400 transition-colors">sadmin2305101751@diu.edu.bd</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
+                                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
+                                        <i class="fa-solid fa-location-dot text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-mono text-slate-400">Location</div>
+                                        <div class="text-white font-medium text-sm">Bangladesh</div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
+                                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 shrink-0">
+                                        <i class="fa-solid fa-university text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-mono text-slate-400">University</div>
+                                        <div class="text-white font-medium text-sm">Daffodil International University</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pt-4 border-t border-white/10 flex items-center gap-4">
+                                <a href="https://github.com/Samira-Sadmin" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-500/40 flex items-center justify-center text-slate-300 hover:text-cyan-400 transition-all">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/samira-sadmin-b39b17331" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-500/40 flex items-center justify-center text-slate-300 hover:text-cyan-400 transition-all">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="lg:col-span-7">
+                        <form id="contact-form" novalidate class="p-8 rounded-3xl bg-slate-950/80 border border-white/10 shadow-xl flex flex-col gap-6 relative">
+                            <h3 class="text-xl font-bold text-white">Send a Message</h3>
+
+                            <!-- Success / Error Feedback Alerts -->
+                            <div id="form-success" class="hidden p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-lg"></i>
+                                <span>Thank you! Your message has been successfully validated. (Note: Actual backend delivery requires a form service or server integration).</span>
+                            </div>
+
+                            <div id="form-error" class="hidden p-4 rounded-2xl bg-rose-500/10 border border-rose-500/30 text-rose-400 text-sm items-center gap-3">
+                                <i class="fa-solid fa-circle-exclamation text-lg"></i>
+                                <span id="error-msg">Please fill out all required fields correctly before submitting.</span>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="flex flex-col gap-2">
+                                    <label for="name" class="text-xs font-mono text-slate-300">Your Name <span class="text-cyan-400">*</span></label>
+                                    <input type="text" id="name" name="name" placeholder="John Doe" class="px-4 py-3 rounded-xl bg-slate-900 border border-white/10 text-white placeholder:text-slate-600 text-sm focus:outline-none focus:border-cyan-400 transition-colors">
+                                    <span class="field-error text-xs text-rose-400 hidden" id="name-error">Name is required.</span>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label for="email" class="text-xs font-mono text-slate-300">Your Email <span class="text-cyan-400">*</span></label>
+                                    <input type="email" id="email" name="email" placeholder="sadmin2305101751@diu.edu.bd" class="px-4 py-3 rounded-xl bg-slate-900 border border-white/10 text-white placeholder:text-slate-600 text-sm focus:outline-none focus:border-cyan-400 transition-colors">
+                                    <span class="field-error text-xs text-rose-400 hidden" id="email-error">Valid email is required.</span>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <label for="subject" class="text-xs font-mono text-slate-300">Subject <span class="text-cyan-400">*</span></label>
+                                <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Collaboration" class="px-4 py-3 rounded-xl bg-slate-900 border border-white/10 text-white placeholder:text-slate-600 text-sm focus:outline-none focus:border-cyan-400 transition-colors">
+                                <span class="field-error text-xs text-rose-400 hidden" id="subject-error">Subject is required.</span>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <label for="message" class="text-xs font-mono text-slate-300">Message <span class="text-cyan-400">*</span></label>
+                                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." class="px-4 py-3 rounded-xl bg-slate-900 border border-white/10 text-white placeholder:text-slate-600 text-sm focus:outline-none focus:border-cyan-400 transition-colors resize-none"></textarea>
+                                <span class="field-error text-xs text-rose-400 hidden" id="message-error">Message is required (minimum 10 characters).</span>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold text-sm hover:opacity-95 transition-all shadow-xl shadow-cyan-500/20 flex items-center justify-center gap-2 group">
+                                <span>Send Message</span>
+                                <i class="fa-solid fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+
+                            <p class="text-xs text-slate-500 text-center font-mono">
+                                Frontend validation active. Actual message delivery requires a backend or form service (e.g. Formspree or EmailJS).
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/10 bg-slate-950 relative z-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center font-mono font-bold text-sm text-white">
+                    SS
+                </div>
+                <div class="text-sm font-semibold text-white">Samira Sadmin</div>
+                <span class="text-xs text-slate-500 font-mono">© 2026 All Rights Reserved.</span>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="https://github.com/Samira-Sadmin" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-slate-400 hover:text-cyan-400 transition-colors text-lg">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/samira-sadmin-b39b17331" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-slate-400 hover:text-cyan-400 transition-colors text-lg">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:sadmin2305101751@diu.edu.bd" aria-label="Email" class="text-slate-400 hover:text-cyan-400 transition-colors text-lg">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+
+            <!-- Back to Top Button -->
+            <button id="back-to-top" aria-label="Back to top" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-500/40 flex items-center justify-center text-slate-300 hover:text-cyan-400 transition-all">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
